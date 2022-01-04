@@ -29,17 +29,22 @@ def clicked():
     year = int(txt.get()[6:])
     print("" + months[month] + " " + str(day) + ", " + str(year))
     #todo? no age verification, so nonsensical inputs like 13/99/9999 are allowed.
-    if day >= currentDate.day and month>=currentDate.month:
+    if month<currentDate.month:
         #birthday has passed
+        age = currentDate.year - year
+    elif month==currentDate.month and day<=currentDate.day:
         age = currentDate.year - year
     else:
         age = currentDate.year - year - 1
-    print(age)
-    if age==22:
-        pywhatkit.playonyt("https://www.youtube.com/watch?v=AgFeZr5ptV8")
+    result = Label(mainWindow, text = "You are " + str(age) + "!!")
+    result.grid(column = 1, row = 3)
+    
     if str(age)==str(age)[::-1]:
         congrats = Label(mainWindow, text = "CONGRATULATIONS! YOUR AGE IS A PALINDROME")
         congrats.grid()
+
+    if age==22:
+        pywhatkit.playonyt("https://www.youtube.com/watch?v=AgFeZr5ptV8")
 
 btn = Button(mainWindow, text = "submit", fg = "red", command=clicked)
 btn.grid(column=2, row=2)
