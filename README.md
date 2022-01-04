@@ -21,12 +21,17 @@ Activate the environment
 Install the required dependencies
 
 ```pip install pywhatkit```
+
 ```pip install datetime```
+
 ```pip install tkinter```
 
 Run the script
+
 ```python sandbox.py```
 
 Other necessities:
+
 An internet connection
+
 The internet browser of your choice
