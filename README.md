@@ -4,8 +4,11 @@ Playing around with Python GUI tools
 Software dependencies:
 
 Python 3.7+
+
 pywhatkit
+
 datetime
+
 tkinter
 
 Recommended installation:
